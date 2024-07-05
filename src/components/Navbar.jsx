@@ -13,8 +13,15 @@ export default function () {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        dispatch(logout());
-        navigate("login");
+        const user = JSON.parse(localStorage.getItem("user"));
+        const confirmLogout = window.confirm(
+            `Apakah anda yakin logout dari akun "${user.name}"`
+        );
+
+        if (confirmLogout) {
+            dispatch(logout());
+            navigate("/");
+        }
     };
 
     return (
