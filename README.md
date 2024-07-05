@@ -10,10 +10,16 @@ pnpm install
 
 ## Usage
 
+### run program
+
 ```js
 // run program
 pnpm run dev
 ```
+
+### Access website
+
+[http://localhost:5173/](http://localhost:5173/)
 
 ### Login
 
